@@ -1,0 +1,61 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" xmlns:f="sap.ui.layout.form" 
+	controllerName="university_app.controller.coursecreation"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	id="roombookingview" viewName="coursecreation">
+	<Page title="Add New Room" showNavButton="true" navButtonPress="onBack">
+		<content>
+			<VBox class="sapUiSmallMargin">
+				
+				<Label text="Course ID"/>
+				<Input id="courseid" width="20em" placeholder="e.x. C101"></Input>
+				
+				<Label text="Course Name"/>
+				<Input id="coursenameid" width="20em" placeholder="e.x. Machine Learning"></Input>
+				
+				<Label text="Course Type"/>
+				<Select id="coursetypeid" width="10em" 
+					autoAdjustWidth="true" selectedKey="0">
+					<core:Item key="LECTURE" text="LECTURE" />
+					<core:Item key="EXERCISE" text="EXERCISE" />
+				</Select>
+				
+				<Label text="Lecturer"/>
+				<Input id="lecturerid" width="20em" placeholder="e.x. Martin S"></Input>
+				
+				<Label text="Department"/>
+				<Input id="departmentid" width="20em" placeholder="e.x. Informatics"></Input>
+				
+				<Label text="Weekly Hours"/>
+				<Input id="weeklyhoursid" width="20em" placeholder="e.x. 6"></Input>
+				
+				<Label text="Content"/>
+				<Input id="contentid" width="20em" placeholder="e.x. Sample content"></Input>
+				
+				<Label text="Pre-requisites"/>
+				<Input id="prerequisitesid" width="20em" placeholder="e.x. Machine Learning 101"></Input>
+				
+				<Label text="Credits"/>
+				<Input id="creditsid" width="20em" placeholder="e.x. 10"></Input>
+				
+				<Label text="Semester Offered In"/>
+				<Select id="semesterofferedinid" width="10em" 
+					autoAdjustWidth="true" selectedKey="0">
+					<core:Item key="SS" text="SS" />
+					<core:Item key="WS" text="WS" />
+				</Select>
+				
+				<Label text="Language of Instruction"/>
+				<Input id="languageid" width="20em" placeholder="e.x. German"></Input>
+				
+				<Label text="Contact"/>
+				<Input id="contactid" width="20em" placeholder="e.x. adrian@tum.de"></Input>
+				
+				<Button text="Add Course" icon="sap-icon://add" type="Accept" 
+					press="addCourse"></Button>
+				
+			</VBox>
+
+		</content>
+	</Page>
+</core:View>

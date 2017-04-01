@@ -1,0 +1,81 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" controllerName="university_app.controller.course"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Courses">
+		<content>
+			<Table id="courseTable" items="{/CourseSet}" growing="true"
+				growingScrollToLoad="true">
+
+				<columns>
+					<Column>
+						<Text text="Course ID"></Text>
+					</Column>
+					<Column>
+						<Text text="Course Name"></Text>
+					</Column>
+					<Column>
+						<Text text="Course Type"></Text>
+					</Column>
+					<Column>
+						<Text text="Lecturer"></Text>
+					</Column>
+					<Column>
+						<Text text="Department"></Text>
+					</Column>
+					<Column>
+						<Text text="Weekly Hours"></Text>
+					</Column>
+					<Column>
+						<Text text="Content"></Text>
+					</Column>
+					<Column>
+						<Text text="Pre-requisites"></Text>
+					</Column>
+					<Column>
+						<Text text="Credits"></Text>
+					</Column>
+					<Column>
+						<Text text="Semester Offered In"></Text>
+					</Column>
+					<Column>
+						<Text text="Language of Instruction"></Text>
+					</Column>
+					<Column>
+						<Text text="Contact"></Text>
+					</Column>
+				</columns>
+
+				<items>
+					<ColumnListItem>
+						<Text text="{CourseId}" />
+						<Text text="{CourseName}" />
+						<Text text="{CourseType}" />
+						<Text text="{Lecturer}" />
+						<Text text="{Department}" />
+						<Text text="{WeeklyHrs}" />
+						<Text text="{Content}" />
+						<Text text="{Prerequisites}" />
+						<Text text="{Credits}" />
+						<Text text="{SemesterOfferedIn}" />
+						<Text text="{LanguageOfInstruction}" />
+						<Text text="{Contact}" />
+					</ColumnListItem>
+				</items>
+
+			</Table>
+		</content>
+		<footer>
+			<Bar>
+				<contentLeft>
+					<Button text="Add New Course" app:link="coursecreation" icon="sap-icon://add"
+						type="Accept" press="navigate"></Button>					
+				</contentLeft>
+				<contentRight>
+					<Button text="View Allotments" app:link="allot" press="navigate"></Button>
+					<Button text="View Rooms" app:link="room" press="navigate"></Button>
+				</contentRight>
+			</Bar>
+		</footer>
+	</Page>
+</core:View>

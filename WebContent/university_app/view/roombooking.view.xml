@@ -1,0 +1,38 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" xmlns:f="sap.ui.layout.form" 
+	controllerName="university_app.controller.roombooking"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	id="roombookingview" viewName="roombooking">
+	<Page title="Book Room" showNavButton="true" navButtonPress="onBack">
+		<content>
+			<VBox class="sapUiSmallMargin">
+				
+				<Label text="Select Room"/>
+				<Select id="RoomId" width="10em" 
+					autoAdjustWidth="true" items="{/RoomSet}" selectedKey="0">
+					<core:Item key="{RoomId}" text="{RoomId}" />
+				</Select>
+				
+				<Label text="Select Course"/>
+				<Select id="CourseId" width="10em" 
+					autoAdjustWidth="true" items="{/CourseSet}" selectedKey="0">
+					<core:Item key="{CourseId}" text="{CourseName}" />
+				</Select>
+				
+				<Label text="Select Date"/>
+				<Input id="AllotmentDate" width="20em" placeholder="DD/MM/YYYY (no extra characters allowed)"/>
+				
+				<Label text="Time from"/>
+				<Input id="TimeFrom" width="20em" placeholder="HH:MM (no extra characters allowed)"/>
+				
+				<Label text="Time to"/>
+				<Input id="TimeTo" width="20em" placeholder="HH:MM (no extra characters allowed)"/>
+				
+				<Button text="Confirm Booking" icon="sap-icon://add" type="Accept" 
+					press="confirmBooking"></Button>
+				
+			</VBox>
+
+		</content>
+	</Page>
+</core:View>

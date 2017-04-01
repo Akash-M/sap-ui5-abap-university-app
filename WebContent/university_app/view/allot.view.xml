@@ -1,0 +1,64 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" controllerName="university_app.controller.allot"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	id="allotviewid">
+	<Page title="Time Table">
+		<content>
+
+			<Table id="allotTable" items="{/AllotSet}" growing="true"
+				growingScrollToLoad="true">
+
+				<columns>
+					<Column>
+						<Text text="Allotment Date"></Text>
+					</Column>
+					<Column>
+						<Text text="Room ID"></Text>
+					</Column>
+					<Column>
+						<Text text="Course ID"></Text>
+					</Column>
+					<Column>
+						<Text text="Start Time"></Text>
+					</Column>
+					<Column>
+						<Text text="End Time"></Text>
+					</Column>
+					<Column>
+						<Text text="Edit Booking"></Text>
+					</Column>
+					<Column>
+						<Text text="Remove Booking"></Text>
+					</Column>
+				</columns>
+
+				<items>
+					<ColumnListItem> 
+						<Text text="{AllotmentDate}"/>
+						<Text text="{RoomId}"/>
+						<Text text="{CourseId}"/>
+						<Text text="{TimeFrom}"/>
+						<Text text="{TimeTo}"/>
+						<Button text="Edit Booking" press="editBooking"></Button>
+						<Button text="Cancel Booking" press="cancelBooking"></Button>
+					</ColumnListItem>
+				</items>
+			</Table>				
+			
+		</content>
+		<footer>
+			<Bar>
+				<contentLeft>
+					<Button text="Book Room" app:link="roombooking" icon="sap-icon://add"
+						type="Accept" 
+					press="navigate"></Button>					
+				</contentLeft>
+				<contentRight>
+					<Button text="View Courses" app:link="course" press="navigate"></Button>
+					<Button text="View Rooms" app:link="room" press="navigate"></Button>
+				</contentRight>
+			</Bar>
+		</footer>
+	</Page>
+</core:View>

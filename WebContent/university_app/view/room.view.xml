@@ -1,0 +1,72 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" controllerName="university_app.controller.room"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Rooms">
+		<content>
+
+			<Table id="roomTable" items="{/RoomSet}" growing="true"
+				growingScrollToLoad="true">
+
+				<columns>
+					<Column>
+						<Text text="Room ID"></Text>
+					</Column>
+					<Column>
+						<Text text="Location"></Text>
+					</Column>
+					<Column>
+						<Text text="Capacity"></Text>
+					</Column>
+					<Column>
+						<Text text="Room Type"></Text>
+					</Column>
+					<Column>
+						<Text text="Projector"></Text>
+					</Column>
+					<Column>
+						<Text text="Whiteboard"></Text>
+					</Column>
+					<Column>
+						<Text text="Workstations"></Text>
+					</Column>
+					<Column>
+						<Text text="Air Conditioning"></Text>
+					</Column>
+				</columns>
+
+				<items>
+					<ColumnListItem>
+						<cells>
+							<Text text="{RoomId}" />
+							<Text text="{Location}" />
+							<Text text="{Capacity}" />
+							<Text text="{RoomType}" />
+							<Text text="{Projector}" />
+							<!-- <Label icon="sap-icon://add" 
+							visible="{= ${Projector} === 't' }"/> -->
+							<Text text="{Whiteboard}" />
+							<Text text="{Workstations}" />
+							<Text text="{AirCondition}" />
+						</cells>
+					</ColumnListItem>
+				</items>
+
+			</Table>
+
+		</content>
+		<footer>
+			<Bar>
+				<contentLeft>
+					<Button text="Add New Room" app:link="roomaddition" icon="sap-icon://add"
+						type="Accept" 
+					press="navigate"></Button>					
+				</contentLeft>
+				<contentRight>
+					<Button text="View Allotments" app:link="allot" press="navigate"></Button>
+					<Button text="View Courses" app:link="course" press="navigate"></Button>
+				</contentRight>
+			</Bar>
+		</footer>
+	</Page>
+</core:View>

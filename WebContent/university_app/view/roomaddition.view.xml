@@ -1,0 +1,62 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" xmlns:f="sap.ui.layout.form" 
+	controllerName="university_app.controller.roomaddition"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	id="roombookingview" viewName="roomaddition">
+	<Page title="Add New Room" showNavButton="true" navButtonPress="onBack">
+		<content>
+			<VBox class="sapUiSmallMargin">
+				
+				<Label text="Room ID"/>
+				<Input id="roomid" width="20em" placeholder="e.x. A101"></Input>
+				
+				<Label text="Room Location"/>
+				<Input id="roomlocationid" width="20em" placeholder="e.x. Garching"></Input>
+				
+				<Label text="Capacity"/>
+				<Input id="capacityid" width="20em" placeholder="e.x. 400"></Input>
+				
+				<Label text="Room Type"/>
+				<Select id="roomtypeid" width="10em" 
+					autoAdjustWidth="true" selectedKey="0">
+					<core:Item key="CLASSROOM" text="CLASSROOM" />
+					<core:Item key="AUDITORIUM" text="AUDITORIUM" />
+				</Select>
+				
+				
+				<Label text="Projector?"/>
+				<Select id="projectorid" width="10em" 
+					autoAdjustWidth="true" selectedKey="0">
+					<core:Item key="available" text="available" />
+					<core:Item key="N/A" text="N/A" />
+				</Select>
+				
+				<Label text="Whiteboard?"/>
+				<Select id="whiteboardid" width="10em" 
+					autoAdjustWidth="true" selectedKey="0">
+					<core:Item key="available" text="available" />
+					<core:Item key="N/A" text="N/A" />
+				</Select>
+				
+				<Label text="Workstations?"/>
+				<Select id="workstationsid" width="10em" 
+					autoAdjustWidth="true" selectedKey="0">
+					<core:Item key="available" text="available" />
+					<core:Item key="N/A" text="N/A" />
+				</Select>
+				
+				<Label text="Air Conditioning?"/>
+				<Select id="airconditionid" width="10em" 
+					autoAdjustWidth="true" selectedKey="0">
+					<core:Item key="available" text="available" />
+					<core:Item key="N/A" text="N/A" />
+				</Select>
+				
+				<Button text="Add Room" icon="sap-icon://add" type="Accept" 
+					press="addRoom"></Button>
+				
+			</VBox>
+
+		</content>
+	</Page>
+</core:View>
